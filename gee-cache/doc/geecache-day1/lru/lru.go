@@ -21,5 +21,14 @@ type entry struct {
 type Value interface {
 	Len() int
 }
+// New is the Constructor of Cache
+func New(maxBytes int64, onEvicted func(string, Value)) *Cache {
+	return &Cache{
+		maxBytes:  maxBytes,
+		ll:        list.New(),
+		cache:     make(map[string]*list.Element),
+		OnEvicted: onEvicted,
+	}
+}
 
 
