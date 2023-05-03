@@ -17,7 +17,7 @@ type entry struct {
 	value Value
 }
 
-// Value use Len to count how many bytes it takes
+// Value use Len to count how many bytes it takes  接口算是方法的集成 
 type Value interface {
 	Len() int
 }
