@@ -1,7 +1,7 @@
 package geecacheday1
 
 import (
-	"lru" // 在同一个包里
+	"geecache-day1/lru" // 在同一个包里
 	"sync"
 )
 
